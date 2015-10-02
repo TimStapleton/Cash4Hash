@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    
+    title CASH 4 HASH
+    
+    link(rel="stylesheet" href="stylesheets/app.css")
+    
+    //ANIMATE WOW
+    link(rel = 'stylesheet' type = 'text/css' href = 'stylesheets/animate.css')
+    
+    //MODERNIZR
+    script(src = "bower_components/modernizr/modernizr.js")
+    script(src="bower_components/modernizr/modernizr.js")
+    
+    //Google Font "Roboto", cyrillic
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    
+    //WOW
+    script( src = "js/wow.min.js")
+    script new WOW().init()
+  body
+    //MENU
+    #menu
+      nav.top-bar(data-topbar role="navigation")
+        ul.title-area
+          li.name
+            a.pagescroll(href = "#top")
+              //MENU TITLE
+              h1.up Cash 4 Hash
+          li.toggle-topbar.menu-icon
+            //MENU TOGGLE BUTTON
+            a(href = "#") Меню
+        section.top-bar-section
+          //MENU ITEMS
+          ul.right
+            li
+              a(href = "#") Главная
+            li
+              a(href = "#") Как это работает
+            li
+              a(href = "#") О нас
+            li
+              a(href = "#")  Войти
+              
+    header
+      h1 Мы увеличиваем ваши продажи
+      h2 Ваши клиенты получат возможность покупать в кредит
+      ul
+        li
+          h3 0% комиссия
+        li
+          h3 оформление заявок онлайн
+        li
+          h3 Бесплатное подключение системы
+    section.blocky
+      h2 Что это вам дает
+      
+      
+    //SCRIPTS
+    //JQUERY
+    script(src = "bower_components/jquery/dist/jquery.min.js")
+              
+    //JQUERY EASING
+    script( src = "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js")
+              
+    //FOUNDATION
+    script(src = "js/foundation.min.js")
+            
+    //SMOOTHSCROLL
+    script(src = "js/smoothscroll.js")
+              
+    //APP
+    script(src = "js/app.js")
