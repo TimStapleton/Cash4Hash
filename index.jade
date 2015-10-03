@@ -21,6 +21,9 @@ html
     //WOW
     script( src = "js/wow.min.js")
     script new WOW().init()
+    
+    //Liver Reload
+    script document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
   body
     //MENU
     #menu
@@ -29,10 +32,11 @@ html
           li.name
             a.pagescroll(href = "#top")
               //MENU TITLE
-              h1.up Cash 4 Hash
+              h1.up РКО
           li.toggle-topbar.menu-icon
             //MENU TOGGLE BUTTON
-            a(href = "#") Меню
+            a(href = "#")
+              span Меню
         section.top-bar-section
           //MENU ITEMS
           ul.right

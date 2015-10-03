@@ -53,7 +53,7 @@ body {
 
 //Misc classes
 .static-bg {
-  background-color: #6BF;
+  background-color: #000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@ section.blocky, header, footer {
   min-height: 100vh;
 
   margin: 0;
-  padding: 3em 2em;
+  padding: 4em 2em;
   border: 0;
 
   overflow: hidden;
@@ -88,6 +88,10 @@ section.blocky, header, footer {
   position: fixed;
   width: 100%;
   z-index: 1000;
+
+  nav ul li h1{
+    padding-left: 2em;
+  }
 }
 
 //Header settings
