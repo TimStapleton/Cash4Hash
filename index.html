@@ -11,63 +11,88 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!--Google Font "Roboto", cyrillic-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet" type="text/css">
     <!--WOW-->
     <script src="js/wow.min.js"></script>
     <script>new WOW().init()</script>
-    <!--Liver Reload-->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </head>
-  <body>
+  <body id="top">
     <!--MENU-->
-    <div id="menu">
+    <div class="menu">
       <nav data-topbar role="navigation" class="top-bar">
         <ul class="title-area">
           <li class="name"><a href="#top" class="pagescroll">
               <!--MENU TITLE-->
-              <h1 class="up">РКО</h1></a></li>
+              <!--h1.up Я хочу--><img src="images/logo.png"></a></li>
           <li class="toggle-topbar menu-icon">
-            <!--MENU TOGGLE BUTTON--><a href="#"><span>Меню</span></a>
+            <!--MENU TOGGLE BUTTON--><a href=""><span>Меню</span></a>
           </li>
         </ul>
         <section class="top-bar-section">
           <!--MENU ITEMS-->
           <ul class="right">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Как это работает</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#"> Войти</a></li>
+            <li><a href="#content" class="pagescroll">В чем наша задача</a></li>
+            <li><a href="#footer" class="pagescroll">Как это работает</a></li>
+            <li><a href="#">Подключить</a></li>
           </ul>
         </section>
       </nav>
     </div>
     <header>
-      <h1>Мы увеличиваем ваши продажи</h1>
-      <h2>Ваши клиенты получат возможность покупать в кредит</h2>
-      <ul>
-        <li>
-          <h3>0% комиссия</h3>
-        </li>
-        <li>
-          <h3>оформление заявок онлайн</h3>
-        </li>
-        <li>
-          <h3>Бесплатное подключение системы</h3>
-        </li>
-      </ul>
+      <div class="fullWidth">
+        <div class="small-12 columns text-center">
+          <h1 class="text-center">Я ХОЧУ - это сервис онлайн кредитования, который увеличит прибыль вашего интернет-магазина</h1>
+        </div>
+      </div><a href="#content" class="want_know pagescroll"><img src="images/want_know2.png">
+        <!--.small-12.columns.text-center
+        //h2 Ваши клиенты получат возможность покупать в кредит
+        
+        --></a>
     </header>
-    <section class="blocky">
-      <h2>Что это вам дает</h2>
+    <section id="content" class="blocky content">
+      <div class="fullWidth">
+        <div class="small-12 columns">
+          <h2 class="text-center up">Мы поможем Вашим клиентам найти деньги на покупки,<br> предоставив займ на конкретный товар</h2>
+        </div>
+        <div class="small-12 columns">
+          <div class="slider slideshow-wrapper">
+            <div class="preloader"></div>
+            <ul data-orbit class="example-orbit">
+              <li><img src="images/Slide1.png" alt=""></li>
+              <li><img src="images/Slide2.png" alt=""></li>
+              <li><img src="images/Slide3.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
+    <footer id="footer">
+      <div class="fullWidth">
+        <div class="large-4 medium-4 small-12 columns wow fadeInLeft"><img src="images/p1.png">
+          <h2 class="wow fadeInUp">Безопасно</h2>
+          <h3 class="text-center wow fadeInUp">Все транзакции надежно защищены и секретны.</h3>
+        </div>
+        <div class="large-4 medium-4 small-12 columns wow fadeInDown"><img src="images/p2.png">
+          <h2 class="wow fadeInUp">Выгодно</h2>
+          <h3 class="text-center wow fadeInUp">Мы берем не более 1,5% в день.</h3>
+        </div>
+        <div class="large-4 medium-4 small-12 columns wow fadeInRight"><img src="images/p3.png">
+          <h2 class="wow fadeInUp">Быстро</h2>
+          <h3 class="text-center wow fadeInUp">На оформление займа Вы потратите всего лишь 20 минут.</h3>
+        </div>
+      </div>
+    </footer>
     <!--SCRIPTS-->
     <!--JQUERY-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!--JQUERY EASING-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!--FOUNDATION-->
-    <script src="js/foundation.min.js"></script>
+    <script src="js/foundation.js"></script>
     <!--SMOOTHSCROLL-->
     <script src="js/smoothscroll.js"></script>
+    <!--Orbit-->
+    <script src="bower_components/foundation/js/foundation.orbit.js"></script>
     <!--APP-->
     <script src="js/app.js"></script>
   </body>

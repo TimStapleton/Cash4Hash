@@ -2,7 +2,7 @@
 @import "foundation";
 
 // Or selectively include components
-// @import
+@import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
 //   "foundation/components/block-grid",
@@ -20,7 +20,7 @@
 //   "foundation/components/keystrokes",
 //   "foundation/components/labels",
 //   "foundation/components/magellan",
-//   "foundation/components/orbit",
+     "foundation/components/orbit",
 //   "foundation/components/pagination",
 //   "foundation/components/panels",
 //   "foundation/components/pricing-tables",
@@ -34,7 +34,7 @@
 //   "foundation/components/tabs",
 //   "foundation/components/thumbs",
 //   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
+     "foundation/components/top-bar";
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
@@ -45,7 +45,7 @@ body {
   margin: 0 !important;
 
   width: 100%;
-  height: 3000px;
+  height: auto;
   min-height: 100vh;
 
   overflow-x: hidden;
@@ -58,13 +58,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  z-index: 0;
 }
 
 .shadow-box {
   box-shadow: 0 0 20px $black;
-  z-index: 500;
+}
+
+.fancy-shadow {
+  box-shadow: 0 0 40px rgba(1, 1, 1, 0.4);
+}
+
+.up {
+  text-transform: uppercase;
 }
 
 //Block settings
@@ -77,17 +82,37 @@ section.blocky, header, footer {
   min-height: 100vh;
 
   margin: 0;
-  padding: 4em 2em;
+  padding-top: 4.4em;
   border: 0;
 
   overflow: hidden;
 }
 
 //Menu settings
-#menu {
+.menu {
   position: fixed;
   width: 100%;
   z-index: 1000;
+
+  background-color: $white;
+
+  @extend .fancy-shadow;
+
+  .name {
+    padding-top: 9px;
+  }
+  img {
+    display: block;
+    position: relative;
+
+    width: auto;
+    height: auto;
+    max-height: 60px;
+    max-width: 50%;
+
+    margin: auto 1.4em;
+    width: auto;
+  }
 
   nav ul li h1{
     padding-left: 2em;
@@ -96,13 +121,34 @@ section.blocky, header, footer {
 
 //Header settings
 header {
-  @extend .static-bg;
-  background-image: url("../images/city_blur_dark.jpg");
+  //@extend .static-bg;
+  //background-image: url("../images/city_blur_dark.jpg");
+  //background-repeat: repeat;
+  background-color: $primary-color;
+  background-attachment: fixed;
+
+  //###CUSTOM#BACKGROUND###
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d94343+0,ff7c54+100 */
+  background: #d94343; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #d94343 0%, #ff7c54 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#d94343), color-stop(100%,#ff7c54)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d94343', endColorstr='#ff7c54',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+
+  //###
+
+  z-index: 0;
+  //padding: 4em 4em;
 
   h1, h2, h3, h4 {
-    color: $green !important;
+    color: $white !important;
     font-weight: 300;
-    //text-shadow: 0px  -1px  $steel;
   }
 
   h1 {
@@ -110,7 +156,149 @@ header {
     width: 100%;
     height: auto;
 
-    text-align: center;
-    white-space: nowrap;
+    line-height: 50px;
+
+    margin-top: 5em;
+  }
+
+  @media #{$medium-up} {
+    h1 {
+      line-height: 100px !important;
+    }
+  }
+
+  h2 {
+    margin-top: 5em;
+    margin-bottom: 11em;
+  }
+
+  h3 {
+    margin-bottom: 0.8em;
+  }
+
+  .want_know {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+
+    top: 84vh;
+    height: auto;
+
+    border-radius: 100px;
+    @extend .fancy-shadow;
+
+    @media #{$small-only} {
+      width: 80%;
+      left: 10%;
+    }
+    @media #{$medium-only} {
+      width: 40%;
+      left: 30%;
+    }
+    @media #{$large-up} {
+      width: 30%;
+      left: 35%;
+    }
+  }
+}
+
+$icon-height: 30px;
+
+.point {
+  line-height: $icon-height !important;
+  padding-left: 1rem;
+}
+.point:before{
+  content: "";
+
+  position: relative;
+  float: left;
+  width: $icon-height;
+  height: $icon-height;
+  background-color: $primary-color;
+  margin: 0px;
+  margin-right: 1rem;
+}
+
+//NextSection
+.content {
+  //@extend .shadow-box;
+  @extend .static-bg;
+
+  @media #{small-only} {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  h1, h2, h3, h4 {
+    color: $primary-color;
+    font-weight: 300;
+  }
+
+  background-color: $white;
+}
+
+//###CONTENT###
+.content {
+  z-index: 500;
+  padding-bottom: 3em;
+
+  @extend .fancy-shadow;
+
+  h1, h2, h3, h4 {
+    font-weight: 400;
+  }
+}
+
+$slider-width: 1280px;
+$slider-height: 720px;
+
+.slider {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  //max-width: $slider-width;
+  //max-height: $slider-height;
+
+  background-color: transparent !important;
+
+  margin: 1em auto;
+
+  max-width: 1280px;
+
+  background-color: $iron;
+  //border-radius: 12px;
+
+  overflow: hidden;
+
+  ul {
+    width: $slider-width !important;
+    //height: auto !important;
+    max-width: 100%;
+    //max-height: 100%;
+  }
+}
+
+
+//###FOOTER###
+footer {
+  @extend .static-bg;
+  text-align: center;
+
+  z-index: 0 !important;
+  background-image: url("../images/arctic.jpg");
+
+  min-height: auto !important;
+  height: auto !important;
+
+  padding-bottom: 3em;
+
+  h1, h2, h3, h4 {
+    color: $white !important;
+    font-weight: 400;
+  }
+
+  img {
+    max-width: 320px;
   }
 }

@@ -735,7 +735,7 @@
     settings : {
       live_validate : true,
       validate_on_blur : true,
-      // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events) 
+      // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events)
       focus_on_invalid : true,
       error_labels : true, // labels with a for="inputId" will recieve an `error` class
       error_class : 'error',
@@ -816,7 +816,7 @@
           }
         })
         .on('reset', function (e) {
-          return self.reset($(this), e);          
+          return self.reset($(this), e);
         })
         .find('input, textarea, select').not(":hidden, [data-abide-ignore]")
           .off('.abide')
@@ -850,7 +850,7 @@
               $('html, body').animate({
                   scrollTop: $(e.target).offset().top
               }, 100);
-            } 
+            }
           });
     },
 
@@ -2358,7 +2358,7 @@
       else {
         vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible');
       }
-      
+
       if (vals.length === 0) {
         return;
       }
@@ -4497,14 +4497,14 @@
 
     settings : {
       animation : 'slide',
-      timer_speed : 10000,
-      pause_on_hover : true,
+      timer_speed : 5000,
+      pause_on_hover : false,
       resume_on_mouseout : false,
       next_on_click : true,
-      animation_speed : 500,
+      animation_speed : 800,
       stack_on_small : false,
       navigation_arrows : true,
-      slide_number : true,
+      slide_number : false,
       slide_number_text : 'of',
       container_class : 'orbit-container',
       stack_on_small_class : 'orbit-stack-on-small',
@@ -5399,11 +5399,11 @@
           var el = this;
           var keyCode = e.keyCode || e.which;
             // if user pressed tab key
-            if (keyCode == 9) { 
+            if (keyCode == 9) {
               e.preventDefault();
               // TODO: Change usual_tab_behavior into accessibility function?
               usual_tab_behavior(e, el);
-            } 
+            }
         })
         // Click event: tab title
         .on('click.fndtn.tab', '[' + this.attr_name() + '] > * > a', function(e) {
@@ -5691,7 +5691,7 @@
           if (/mouse/i.test(e.type) && self.ie_touch(e)) {
             return false;
           }
-          
+
           if ($this.hasClass('open')) {
             if (Modernizr.touch && /touchstart|MSPointerDown/i.test(e.type)) {
               e.preventDefault();
@@ -5844,7 +5844,7 @@
         if (nub.attr('style')) {
           nub.removeAttr('style');
         }
-        
+
         tip.removeClass('tip-override');
         if (classes && classes.indexOf('tip-top') > -1) {
           if (Foundation.rtl) {
