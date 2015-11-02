@@ -34,10 +34,10 @@
 //   "foundation/components/tabs",
 //   "foundation/components/thumbs",
 //   "foundation/components/tooltips",
-     "foundation/components/top-bar";
+     "foundation/components/top-bar",
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+     "foundation/components/visibility";
 
 //Body settings
 body {
@@ -54,6 +54,7 @@ body {
 //Misc classes
 .static-bg {
   background-color: #000;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,7 +83,7 @@ section.blocky, header, footer {
   min-height: 100vh;
 
   margin: 0;
-  padding-top: 4.4em;
+  padding: 4.4em 1em;
   border: 0;
 
   overflow: hidden;
@@ -90,6 +91,7 @@ section.blocky, header, footer {
 
 //Menu settings
 .menu {
+  //display: none !important;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -99,7 +101,7 @@ section.blocky, header, footer {
   @extend .fancy-shadow;
 
   .name {
-    padding-top: 9px;
+    padding-top: 10px;
   }
   img {
     display: block;
@@ -107,10 +109,10 @@ section.blocky, header, footer {
 
     width: auto;
     height: auto;
-    max-height: 60px;
-    max-width: 50%;
+    height: 60px !important;
 
-    margin: auto 1.4em;
+    margin: 0;
+    margin-left: 10px;
     width: auto;
   }
 
@@ -120,165 +122,133 @@ section.blocky, header, footer {
 }
 
 //Header settings
+.margin-bottom {
+  @media #{$small-only} {
+    margin-bottom: 100px;
+  }
+  @media #{$medium-only} {
+    margin-bottom: 100px;
+  }
+}
+
 header {
-  //@extend .static-bg;
-  //background-image: url("../images/city_blur_dark.jpg");
-  //background-repeat: repeat;
-  background-color: $primary-color;
   background-attachment: fixed;
 
   //###CUSTOM#BACKGROUND###
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d94343+0,ff7c54+100 */
-  background: #d94343; /* Old browsers */
-  background: -moz-linear-gradient(45deg,  #d94343 0%, #ff7c54 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#d94343), color-stop(100%,#ff7c54)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* IE10+ */
-  background: linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d94343', endColorstr='#ff7c54',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
+  background: #d94343; // Old browsers
+  background: -moz-linear-gradient(45deg,  #d94343 0%, #ff7c54 100%); // FF3.6+
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#d94343), color-stop(100%,#ff7c54)); // Chrome,Safari4+
+  background: -webkit-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); // Chrome10+,Safari5.1+
+  background: -o-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); // Opera 11.10+
+  background: -ms-linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); // IE10+
+  background: linear-gradient(45deg,  #d94343 0%,#ff7c54 100%); // W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d94343', endColorstr='#ff7c54',GradientType=1 ); // IE6-9 fallback on horizontal gradient */
 
   //###
 
   z-index: 0;
-  //padding: 4em 4em;
+
+  padding-bottom: 0 !important;
 
   h1, h2, h3, h4 {
     color: $white !important;
     font-weight: 300;
   }
 
-  h1 {
+  h1, h2 {
     display: block;
     width: 100%;
     height: auto;
-
-    line-height: 50px;
-
-    margin-top: 5em;
+    margin-bottom: 0.9em;
   }
-
-  @media #{$medium-up} {
-    h1 {
-      line-height: 100px !important;
-    }
-  }
-
-  h2 {
-    margin-top: 5em;
-    margin-bottom: 11em;
-  }
-
   h3 {
     margin-bottom: 0.8em;
   }
 
-  .want_know {
+  .want-know {
     display: block;
     position: absolute;
     box-sizing: border-box;
 
-    top: 84vh;
+    bottom: 30px;
     height: auto;
 
-    border-radius: 100px;
-    @extend .fancy-shadow;
+    //border-radius: 100px;
+    //@extend .fancy-shadow;
 
     @media #{$small-only} {
-      width: 80%;
-      left: 10%;
+      width: 50%;
+      left: 25%;
     }
     @media #{$medium-only} {
-      width: 40%;
-      left: 30%;
+      width: 20%;
+      left: 40%;
     }
     @media #{$large-up} {
-      width: 30%;
-      left: 35%;
+      width: 10%;
+      left: 45%;
     }
   }
 }
 
-$icon-height: 30px;
-
-.point {
-  line-height: $icon-height !important;
-  padding-left: 1rem;
+ul.points {
+  list-style:none;
 }
-.point:before{
-  content: "";
+
+$icon-size: 35px;
+
+.icn {
+  line-height: $icon-size !important;
+  padding-left: 1rem;
+  margin-top: 1.6em;
+}
+
+.icn::before{
+  content: inherit;
 
   position: relative;
   float: left;
-  width: $icon-height;
-  height: $icon-height;
-  background-color: $primary-color;
+  width: $icon-size;
+  height: $icon-size;
+  background-color: transparent;
   margin: 0px;
   margin-right: 1rem;
 }
 
-//NextSection
-.content {
-  //@extend .shadow-box;
-  @extend .static-bg;
+.icn-ruble::before {
+  content: url("../images/icn-ruble.png");
+}
+.icn-www::before {
+  content: url("../images/icn-www.png");
+}
+.icn-percent::before {
+  content: url("../images/icn-percent.png");
+}
 
-  @media #{small-only} {
-    height: auto !important;
-    min-height: auto !important;
-  }
+.slider {
+  display: block;
+  box-sizing: border-box;
+  height: auto;
+
+  background-color: transparent !important;
+}
+
+
+//###CONTENT###
+.content {
+  z-index: 500;
+
+  @extend .fancy-shadow;
+
   h1, h2, h3, h4 {
     color: $primary-color;
     font-weight: 300;
   }
 
-  background-color: $white;
+  @extend .shadow-box;
 }
-
-//###CONTENT###
-.content {
-  z-index: 500;
-  padding-bottom: 3em;
-
-  @extend .fancy-shadow;
-
-  h1, h2, h3, h4 {
-    font-weight: 400;
-  }
-}
-
-$slider-width: 1280px;
-$slider-height: 720px;
-
-.slider {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  //max-width: $slider-width;
-  //max-height: $slider-height;
-
-  background-color: transparent !important;
-
-  margin: 1em auto;
-
-  max-width: 1280px;
-
-  background-color: $iron;
-  //border-radius: 12px;
-
-  overflow: hidden;
-
-  ul {
-    width: $slider-width !important;
-    //height: auto !important;
-    max-width: 100%;
-    //max-height: 100%;
-  }
-}
-
 
 //###FOOTER###
 footer {
@@ -288,14 +258,34 @@ footer {
   z-index: 0 !important;
   background-image: url("../images/arctic.jpg");
 
-  min-height: auto !important;
-  height: auto !important;
+  //min-height: auto !important;
+  //height: auto !important;
 
-  padding-bottom: 3em;
+  padding-top: 4em;
+  padding-bottom: 2.5em;
 
   h1, h2, h3, h4 {
     color: $white !important;
     font-weight: 400;
+  }
+
+  h1 {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    margin-top: 40vh;
+  }
+
+  @media #{$medium-only} {
+    h1 {
+      line-height: 60px !important;
+    }
+  }
+  @media #{$large-up} {
+    h1 {
+      line-height: 80px !important;
+    }
   }
 
   img {

@@ -22,7 +22,7 @@ html
     script( src = "js/wow.min.js")
     script new WOW().init()
     
-  body#top
+  body
     //MENU
     .menu
       nav.top-bar(data-topbar role="navigation")
@@ -31,7 +31,7 @@ html
             a.pagescroll(href = "#top")
               //MENU TITLE
               //h1.up Я хочу
-              img(src = "images/logo.png")
+              img(src = "images/logo_2.png")
           li.toggle-topbar.menu-icon
             //MENU TOGGLE BUTTON
             a(href = "")
@@ -46,44 +46,54 @@ html
             li
               a(href = "#") Подключить
               
-    header
+    header#top
       .fullWidth
         .small-12.columns.text-center
-          h1.text-center Я ХОЧУ - это сервис онлайн кредитования, который увеличит прибыль вашего интернет-магазина
-      a.want_know.pagescroll(href = "#content")
-        img(src = "images/want_know2.png")
-        //.small-12.columns.text-center
-            //h2 Ваши клиенты получат возможность покупать в кредит
-            
-    section.blocky.content#content
-      .fullWidth
-        .small-12.columns
-          h2.text-center.up Мы поможем Вашим клиентам найти деньги на покупки,<br> предоставив займ на конкретный товар
-        .small-12.columns
+          h1 На словах ты Лев Толстой...
+          h2 Пожалуй лучший спооб увеличить продажи
+        .small-12.medium-6.columns.margin-bottom
+          ul.points
+            li
+              h3.icn.icn-ruble Бесплатное подключение
+            li
+              h3.icn.icn-www Выдача займов онлайн
+            li
+              h3.icn.icn-percent Без комисии
+        .small-12.medium-6.columns.margin-bottom
           .slider.slideshow-wrapper
             .preloader
             ul.example-orbit(data-orbit)
               li
-                img(src="images/Slide1.png" alt="")
+                img(src="images/Slide1_2.png" alt="")
               li
-                img(src="images/Slide2.png" alt="")
+                img(src="images/Slide2_1.png" alt="")
               li
-                img(src="images/Slide3.png" alt="")
+                img(src="images/Slide3_1.png" alt="")
+        .small-12.columns
+          .want-know
+            a.pagescroll(href = "#content")
+              img(src = "images/arrow.png")
+    section.blocky.content#content
+      .fullWidth
+        .small-12.columns
+          h2.text-center.up Мы поможем Вашим клиентам найти деньги на покупки,<br> предоставив займ на конкретный товар
                 
     footer#footer
       .fullWidth
-        .large-4.medium-4.small-12.columns.wow.fadeInLeft
-          img(src = "images/p1.png")
-          h2.wow.fadeInUp Безопасно
-          h3.text-center.wow.fadeInUp Все транзакции надежно защищены и секретны.
-        .large-4.medium-4.small-12.columns.wow.fadeInDown
-          img(src = "images/p2.png")
-          h2.wow.fadeInUp Выгодно
-          h3.text-center.wow.fadeInUp Мы берем не более 1,5% в день.
-        .large-4.medium-4.small-12.columns.wow.fadeInRight
-          img(src = "images/p3.png")
-          h2.wow.fadeInUp Быстро
-          h3.text-center.wow.fadeInUp На оформление займа Вы потратите всего лишь 20 минут.
+        .small-12.columns
+          h1.text-center.up За это мы ничего с вас не возьмем. Вообще.
+        //.large-4.medium-4.small-12.columns.wow.fadeInLeft
+          //img(src = "images/p1.png")
+          //h2.wow.fadeInUp Безопасно
+          //h3.text-center.wow.fadeInUp Все транзакции надежно защищены и секретны.
+        //.large-4.medium-4.small-12.columns.wow.fadeInDown
+          //img(src = "images/p2.png")
+          //h2.wow.fadeInUp Выгодно
+          //h3.text-center.wow.fadeInUp Мы берем не более 1,5% в день.
+        //.large-4.medium-4.small-12.columns.wow.fadeInRight
+          //img(src = "images/p3.png")
+          //h2.wow.fadeInUp Быстро
+          //h3.text-center.wow.fadeInUp На оформление займа Вы потратите всего лишь 20 минут.
       
       
     //SCRIPTS
